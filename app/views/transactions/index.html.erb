@@ -2,6 +2,17 @@
 
 <!-- Step 1: List all transaction, starting with the ICO -->
 
+<%
+  transactions = Transaction.all
+%>
+
+<ul>
+    <% for transaction in transactions %>
+        <li> <%= transaction.from_user_id%> <%= transaction.to_user_id %> <%= transaction.amount %> </li>
+    <% end %>
+</ul>
+
+
 <!-- Step 2: Calculate and display the balances -->
 
 <!-- 
